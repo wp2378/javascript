@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:checked + span {color: red; font-weight: bold;}
+
+        input:disabled + span {color: gray; text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <ul>가상 UI 요소 상태 선택자</ul>
+
+    <form>
+        <input type="radio" name="gender" value="male" /> <span>남자</span><br />
+        <input type="radio" name="gender" value="female" /> <span>여자</span><br />
+        <hr/>
+
+        <input type="checkbox" name="skills" value="java"> <span>자바</span><br />
+        <input type="checkbox" name="skills" value="c"> <span>c언어</span><br />
+        <input type="checkbox" name="skills" value="python"> <span>파이썬</span><br />
+        <input type="checkbox" name="skills" value="ruby" disabled /> <span>루비</span><br />
+        <input type="checkbox" name="skills" value="lisp" disabled /> <span>리스프</span><br />
+    </form>
+</body>
+</html>

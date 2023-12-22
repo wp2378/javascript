@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 입력 양식 태그</h1>
+    <!--
+        <form> 태그
+            + 사용자 입력한 데이터를 수집해서 웹서버로 제출할 때 사용하는 태그다.
+            + input, textarea, button, select, checkbox, radio button 등의
+              입력 양식 태그를 포함할 수 있다.
+            + 주요 속성
+                method
+                    수집한 입력데이터를 웹서버로 전달하는 방식을 지정한다.
+                    전달방식은 GET/POST가 있다.
+                action
+                    수집한 입력데이터가 전송될 URL을 지정한다.
+                    수집한 입력데이터를 처리하는 웨 애플리케이션의 URL을 지정한다.
+        주요 입력 양식 태그
+            <input type="text"/>
+                텍스트 입력필드를 추가한다.
+            <input type="password"/>
+                비밀번호 입력필드를 추가한다.
+            <input type="radio"/>
+                여러 개 중에서 하나만 선택할 수 있는 라디오 버튼을 추가한다.
+            <input type="checkbox" />
+                여러 개 중에서 복수개 선책할 수 있는 체크박스를 추가한다.
+            <input type="file" />
+                첨부파일 업로드 필드를 추가한다.
+            <input type="date" />
+                날짜 입력필드를 추가한다.
+            <input type="datetime" />
+                날짜/시간 입력필드를 추가한다.
+            <input type="number" />
+                숫자 입력필드를 추가한다.
+            <input type="rest" />
+                입력폼 초기화 버튼을 추가한다.
+            <input type="submit" /> 
+                폼 입력값을 서버로 제출하는 버튼을 추가한다.
+            <input type="hidden" />
+                숨김 필드를 추가한다.
+
+            <seelct> 태그
+                콤보박스를 추가한다.
+                콤보박스는 <option>태그를 포함한다.
+
+            <textarea> 태그
+                여러 줄의 텍스트를 입력할 수 있는 입력필드를 추가한다.
+
+            <button> 태그
+                버튼을 생성한다.
+    -->
+
+    <h2>입력폼 예</h2>
+    <form method="post" action="login.jsp">
+        <h3>텍스트 입력필드</h3>
+        <input type="text" />
+
+        <h3>비밀번호 입력필드</h3>
+        <input type="password" name="pwd" />
+
+        <h3>라디오 버튼</h3>
+        <input type="radio" name="gender" value="male" checked /> 남자
+        <input type="radio" name="gender" value="female" /> 여자<br/>
+
+        <input type="radio" name="edu" value="고졸"  /> 고졸
+        <input type="radio" name="edu" value="전문대졸" /> 전문대졸
+        <input type="radio" name="edu" value="대졸" /> 대졸
+        <input type="radio" name="edu" value="대학원졸" /> 대학원졸
+
+        <h3>체크박스</h3>
+        <input type="checkbox" name="skils" value="java"> 자바
+        <input type="checkbox" name="skils" value="python"> 파이썬
+        <input type="checkbox" name="skils" value="c"> c
+        <input type="checkbox" name="skils" value="c++"> c++
+        <input type="checkbox" name="skils" value="rust"> 러스트
+        
+        <h3>날자 필드</h3>
+        <input type="date" name="birth" />
+
+        <h3>시간 필드</h3>
+        <input type="tiom" name="ticketingTime;" />
+
+        <h3>날짜/시간 필드</h3>
+        <input type="datetime-local" name="birthdaytime" /> 
+
+        <h3>숫자필드</h3>
+        <input type="number" name="amount" value="0" step="10" min="0" max="100" />
+
+        <h3>범위 필드</h3>
+        <input type="range" name="points" min="0" max="100" step="5" value="35" />
+        
+        <h3>첨부파일 필드</h3>
+        <input type="file" name="myfile" />
+
+        <h3>콤보박스</h3>
+        <select name="city">
+            <optgroup label="도">
+                <option value="1100" selected> 서울</option>  // selected를 넣으면 그 열이 기본값이 된다.
+                <option value="1200"> 부산</option>
+                <option value="1300"> 인천</option>
+                <option value="1400"> 광주</option>
+                <option value="1500"> 대구</option>
+             </optgroup>
+             <optgroup label="시">
+                <option value="2100"> 경기도</option>  
+                <option value="2200"> 강원도</option>
+                <option value="2300"> 전라도</option>
+                <option value="2400"> 충청도</option>
+                <option value="2100"> 경상도</option>
+             </optgroup>
+
+
+        </select>
+
+        <h3>리셋버튼과 제출버튼</h3>
+        <input type="reset" value="리셋버튼" />
+        <input type="submit" value="제출버튼" />
+    </form>
+</body>
+</html>

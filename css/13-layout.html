@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f0f3f4;
+            color: #58666e;
+        }
+        header {
+            width: 100%;
+            height: 60px;
+            z-index: 2000;
+            background-color: #fff;
+            /* box-show 효과를 추가한다.*/
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+        /* Navigation을 오른쪽으로 정렬한다.*/
+        nav {
+            float: right;
+        }
+        /* 로그 이미지를 수직을 중앙 정렬한다.*/
+        .logo {
+            /*a태그를 inline_block으로 변경해서 heigh와 margin을 지정할 수 있게 한다.*/
+            display: inline-block;
+            height: 36px;
+            margin: 12px 0 12px 25px;
+        }
+        .logo > img { height: 36px;}
+
+        .nav-items > li {
+            /*수직정렬되어 있는 Navigation bar를 수평 정렬한다.*/
+            display: inline-block;
+        }
+        /*글자의 자간을 Navigation bar의 높이와 동일하게 맞춰서 메뉴가 수직 중앙 정렬되게한다.*/
+        .nav-items > li > a {
+            line-height: 60px;
+            padding: 0 30px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+        /*링크에 마우스를 올리면 색깔이 변한다.*/
+        .nav-items > li > a:hover {
+            color: rgba(0, 0, 0, 0.8);
+        }
+         li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <a class="logo" href="/home">
+                <img src="https://poiemaweb.com/img/logo.png" height="36px">
+            </a>
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="/home">Home</a> </li>
+                    <li><a href="/news">News</a> </li>
+                    <li><a href="/contact">Contact</a> </li>
+                    <li><a href="/about">about</a> </li>
+
+
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
